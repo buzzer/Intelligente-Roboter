@@ -1,4 +1,4 @@
-#LyX 1.6.5svn created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -234,7 +234,7 @@ Modular robots are built from normally one type of robust building block,
 \end_layout
 
 \begin_layout Subsection*
-Adaptive
+Adaptivity
 \end_layout
 
 \begin_layout Standard
@@ -245,16 +245,41 @@ Modular robots are designed to move in lot of different environment requiring
 \end_layout
 
 \begin_layout Subsection*
-Self-repair
+Self-repair Capability
 \end_layout
 
 \begin_layout Standard
 Another advantage of modular robots is to fix cause damage at the robot
  structure.
+\begin_inset Newline newline
+\end_inset
+
+So a modular robot could repair, i.e.
+ exchange, defect modules with good backup ones.
+ Following this idea it is also imaginable that such kind of robot could
+ repair another robot of that kind if it run out of backup modules or is
+ not in condition to repair itself.
 \end_layout
 
 \begin_layout Subsection*
-economic
+Economic Advantage
+\end_layout
+
+\begin_layout Standard
+Besides functional advantages as the one listed above the exonomic one would
+ be to minimize overall costs compared to traditional robot to complete
+ a mission.
+ Let us consider only one or two, maybe a few type of modules mass produced
+ compared to a several order of magnitude higher count of dedicated modules
+ for a traditional robot.
+ Another economic advantage will be discussed in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Space-exploration"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Section*
@@ -262,7 +287,7 @@ economic
 status open
 
 \begin_layout Plain Layout
-Structure of this text
+TODO: Structure of this text
 \end_layout
 
 \end_inset
@@ -285,32 +310,35 @@ description "One dimensional topological robots."
 
 \end_layout
 
-\begin_layout Section
-Chain topology
-\end_layout
-
-\begin_layout Itemize
-1D +2D locomotion
-\end_layout
-
-\begin_layout Section
-Lattice topology
-\end_layout
-
-\begin_layout Itemize
-2D locomotion
-\end_layout
-
 \begin_layout Standard
 \begin_inset Note Note
 status open
 
-\begin_layout Section
-limbless
+\begin_layout Plain Layout
+Difference Morphology vs.
+ Classification:
 \end_layout
 
-\begin_layout Section
-reconfigurable
+\begin_layout Itemize
+In biology 
+\emph on
+morphology
+\emph default
+ is the form, structure and configuration of an organism.
+ This includes aspects of the outward appearance (shape, structure, colour,
+ pattern) as well as the form and structure of the internal parts like bones
+ and organs.
+\end_layout
+
+\begin_layout Itemize
+
+\emph on
+Topology
+\emph default
+ is a major area of mathematics concerned with spatial properties that are
+ preserved under continuous deformations of objects, for example, deformations
+ that involve stretching, but no tearing or gluing.
+ [Wikipedia]
 \end_layout
 
 \end_inset
@@ -318,8 +346,114 @@ reconfigurable
 
 \end_layout
 
+\begin_layout Standard
+In general there are three classes of topologies.
+\end_layout
+
 \begin_layout Section
-Examples
+Chain Topology
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1D +2D locomotion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the chain topology modules are connected in a string or tree-like manner.
+ In can fold up to become a 3D structure.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: insert figure
+\end_layout
+
+\end_inset
+
+Such modular robots hav a strict serial architecture when speaking about
+ robot control.
+ This topology is very versatile but computationally difficult to represent
+ and analyze.
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: explain or reference.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Example
+\end_layout
+
+\begin_layout Section
+Lattice Topology
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+2D locomotion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the lattice topology the robot's modules are connected in a space filling
+ 3D pattern by default.
+ In contrast to the chain topology a robot is controlled and excecutes its
+ motion in parallel.
+ The overall computation is simpler and this topology is scalable to complex
+ systems.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: explain or reference.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Example
+\end_layout
+
+\begin_layout Section
+Hybrid or Self-Reconfigurable
+\end_layout
+
+\begin_layout Standard
+This is not an standalone topology but more a dynamic hybrid from the two
+ previous types.
+ It can change from chain to lattice topology or vice versa adapting to
+ its environment and task.
+\end_layout
+
+\begin_layout Subsection
+Example
 \end_layout
 
 \begin_layout Standard
@@ -332,6 +466,242 @@ PolyBot from Mark Yim
 
 \begin_layout Plain Layout
 Superbot from Wei-min Shen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+limbless ??
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Summary
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100text%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="3">
+<features>
+<column alignment="center" valignment="top" width="20text%">
+<column alignment="center" valignment="top" width="40text%">
+<column alignment="center" valignment="middle" width="40text%">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pros
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cons
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Chain
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+dsfd
+\end_layout
+
+\begin_layout Itemize
+fghfd
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="middle" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Plain Layout
+sdf
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Lattice
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sdfd
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sdfds
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Hybrid
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+dsfd
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Summary Topologies
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Tab:TopSummary"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -496,19 +866,26 @@ Locomation gates
 \end_layout
 
 \begin_layout Chapter
-Modular Robots Applications
+Modular Robot Applications
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Section
 Search and rescue
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Section
 Inspection of tubes and bridges
 \end_layout
 
-\begin_layout Itemize
+\begin_layout Section
 Space exploration
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Space-exploration"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
