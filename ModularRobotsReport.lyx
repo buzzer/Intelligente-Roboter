@@ -1,8 +1,11 @@
-#LyX 1.6.4.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5svn created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
 \textclass scrreprt
+\begin_preamble
+
+\end_preamble
 \use_default_options true
 \language english
 \inputencoding auto
@@ -27,7 +30,7 @@
 \pdf_bookmarksnumbered false
 \pdf_bookmarksopen false
 \pdf_bookmarksopenlevel 1
-\pdf_breaklinks false
+\pdf_breaklinks true
 \pdf_pdfborder false
 \pdf_colorlinks false
 \pdf_backref false
@@ -158,7 +161,7 @@ status open
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Short Introduction to Mobile Robotics and especially modular robots.
@@ -185,12 +188,73 @@ What is not covered (Snake-like robot?)
 Definition
 \end_layout
 
+\begin_layout Standard
+Modular robots adapt to new circumstances, perform new tasks or recover
+ from damage in contrast to ordinary robots.
+\end_layout
+
 \begin_layout Section
 Structures
 \end_layout
 
+\begin_layout Standard
+Modular robots consists of few types of building blocks with an uniform
+ interface.
+ That interface has to pass mechanical forces, electrical power as well
+ as communication between building blocks.
+\begin_inset Newline newline
+\end_inset
+
+Although the basic uniformity of blocks there are some primary structured
+ ones.
+ They provide the robot with necessary and extra features like a gripper,
+ feet, wheels, sensors, e.g.
+ a camera, as well as energy storage or additional payload.
+\end_layout
+
 \begin_layout Section
-Motivation and Advantages
+Motivation and Inspiration
+\end_layout
+
+\begin_layout Subsection*
+Robustness
+\end_layout
+
+\begin_layout Standard
+Modular robots are built from normally one type of robust building block,
+ lets call it module.
+ This module has to be robust enough for connecting some key part of the
+ robot, e.g.
+ the neck.
+ Furthermore also robot parts that don't require robustness but accuracy,
+ e.g.
+ arms or even, fingers have to be built from the one or few kinds of modules.
+ Thus the certainly robustness of one module type defines the robust structure
+ of the whole robot.
+\end_layout
+
+\begin_layout Subsection*
+Adaptive
+\end_layout
+
+\begin_layout Standard
+Modular robots are designed to move in lot of different environment requiring
+ to morphological change the robot's shape to perform the most efficient
+ movement according to it.
+ Full filling more difficult tasks than ordinary robots is possible.
+\end_layout
+
+\begin_layout Subsection*
+Self-repair
+\end_layout
+
+\begin_layout Standard
+Another advantage of modular robots is to fix cause damage at the robot
+ structure.
+\end_layout
+
+\begin_layout Subsection*
+economic
 \end_layout
 
 \begin_layout Section*
@@ -207,83 +271,47 @@ Structure of this text
 \end_layout
 
 \begin_layout Chapter
-Overview
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-2 Seiten
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "cha:Overview"
-
-\end_inset
-
-
+Morphology and Classification
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Itemize
-What is a Modular Robot?
-\end_layout
-
-\begin_layout Itemize
-Modular Robotics consists of...
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Definition
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-See Pratical course_Modularrobot_Lecture1_Introduction and first try.pdf
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Motivation and inspiration
-\end_layout
-
-\begin_layout Chapter
-Morphologie
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-1D, 2D, 3D
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "Apodal robots"
 description "One dimensional topological robots."
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Chain topology
+\end_layout
+
+\begin_layout Itemize
+1D +2D locomotion
+\end_layout
+
+\begin_layout Section
+Lattice topology
+\end_layout
+
+\begin_layout Itemize
+2D locomotion
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Section
+limbless
+\end_layout
+
+\begin_layout Section
+reconfigurable
+\end_layout
 
 \end_inset
 
@@ -311,8 +339,35 @@ Superbot from Wei-min Shen
 
 \end_layout
 
+\begin_layout Section
+Other Possibilities
+\end_layout
+
+\begin_layout Itemize
+Three-legged robot
+\end_layout
+
+\begin_layout Itemize
+Four-legged robot
+\end_layout
+
+\begin_layout Itemize
+Six-legged robot 
+\end_layout
+
+\begin_layout Itemize
+Biped robot
+\end_layout
+
 \begin_layout Chapter
-Locomation 
+Locomotion 
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Locomation"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -320,10 +375,25 @@ Controlling Method
 \end_layout
 
 \begin_layout Standard
+Limbless configuration:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula $y_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $(A_{i},t,\phi,O_{i})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Locomotion in 2D
 \end_layout
 
 \begin_layout Section
@@ -350,12 +420,42 @@ Lateral Shift
 Rotating Gait
 \end_layout
 
+\begin_layout Subsection
+Demos
+\end_layout
+
 \begin_layout Section
 Topology
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+1D, 2D, 3D
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Classic approach
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Inverse Kinematic
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -367,11 +467,19 @@ Bio-inspired Approach
 status open
 
 \begin_layout Plain Layout
+Central Pattern Generator (CPG)
+\end_layout
+
+\begin_layout Plain Layout
 Show contrast to conventional mobile robots.
 \end_layout
 
 \begin_layout Plain Layout
 Locomation gaits available.
+\end_layout
+
+\begin_layout Plain Layout
+Modular Grasping
 \end_layout
 
 \end_inset
@@ -385,45 +493,6 @@ Sinusoidal oscillators
 
 \begin_layout Section
 Locomation gates
-\end_layout
-
-\begin_layout Chapter
-Sensors
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-3.5 Seiten
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Hardware Architecture
-\end_layout
-
-\begin_layout Chapter
-Software Architecture
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-2 Seiten
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "cha:Software-Architecture"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Chapter
@@ -443,17 +512,30 @@ Space exploration
 \end_layout
 
 \begin_layout Chapter
-Summary
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-2 Seiten
-\end_layout
+Challenges
+\begin_inset CommandInset label
+LatexCommand label
+name "cha:Challenges"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section
+Big Systems
+\end_layout
+
+\begin_layout Section
+Self-repairing Systems
+\end_layout
+
+\begin_layout Section
+Self-replication and self-extension
+\end_layout
+
+\begin_layout Chapter
+Summary
 \begin_inset CommandInset label
 LatexCommand label
 name "cha:Summary"
@@ -465,7 +547,7 @@ name "cha:Summary"
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 What was covered?
@@ -483,8 +565,9 @@ What is (and why) useful for future student projects?
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "/Users/sebastian/Documents/_BibPapers/Robotics2009"
-options "bibtotoc,plainnat"
+btprint "btPrintAll"
+bibfiles "/Users/sebastian/Documents/_BibPapers/ModRobots2009"
+options "bibtotoc,alphadin"
 
 \end_inset
 
