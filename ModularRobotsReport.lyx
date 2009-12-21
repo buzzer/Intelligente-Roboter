@@ -470,6 +470,97 @@ Superbot from Wei-min Shen
 
 \end_inset
 
+One examples comes from the some famous pioneer of modular robots, Mark
+ Yim.
+ He developed a prototyp called 
+\begin_inset Quotes eld
+\end_inset
+
+PolyBot
+\begin_inset Quotes erd
+\end_inset
+
+ during his study at the MIT
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "MIT"
+description "Massachusetts Institute of Technology"
+
+\end_inset
+
+ in 1994.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+double check name
+\end_layout
+
+\end_inset
+
+It is a chain self-reconfigurable system.
+ Each module is roughly cubic shaped, with about 5 centimeters of edge length
+ and has one rotational DOF.
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "DOF"
+description "Degree of Freedom"
+
+\end_inset
+
+That modular robot features many modes of locomation, e.g.
+ caterpillar, wheel, spider.
+ Whereas the first version came along without sensors new versions have
+ force toryue, whisker and infrared proximity sensors.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Really w/o sensors? Picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A good example of a hybrid modular robot is the 'M-TRAN' from Satoshi Murata
+ et.
+ al., a Japanese research group.
+ The robot has two blocks (active), a motor each, connected through a link
+ (passive).
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO add Picture
+\end_layout
+
+\end_inset
+
+Resulting in two parallel axes and six connectable surfaces.
+ The active block has therefore mechanical connectors.
+ Both blocks have a 90 degrees rotation angle.
+ Each module has 4 CPUs in a Master/Slave-Architecture.
+ The Master CPU computes algorithms and handles the module communication.
+ The Slave CPUs control the motors and connection as well as the sensor
+ data.
+ Module inter-communication is realized via virtual shared memory.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: add picture
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -491,10 +582,20 @@ Summary
 \end_layout
 
 \begin_layout Standard
+A brief summary of the two major modular robot topologies is listed in table
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Tab:TopSummary"
+
+\end_inset
+
+.
+ 
 \begin_inset Float table
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \align center
@@ -503,8 +604,8 @@ position "t"
 hor_pos "c"
 has_inner_box 1
 inner_pos "t"
-use_parbox 0
-width "100text%"
+use_parbox 1
+width "100line%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -512,10 +613,10 @@ status open
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="4" columns="3">
+<lyxtabular version="3" rows="3" columns="3">
 <features>
-<column alignment="center" valignment="top" width="20text%">
-<column alignment="center" valignment="top" width="40text%">
+<column alignment="center" valignment="middle" width="20text%">
+<column alignment="center" valignment="middle" width="40text%">
 <column alignment="center" valignment="middle" width="40text%">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -561,23 +662,23 @@ Chain
 
 \begin_layout Plain Layout
 \begin_inset Box Frameless
-position "t"
+position "c"
 hor_pos "c"
 has_inner_box 1
-inner_pos "t"
-use_parbox 0
-width "100col%"
+inner_pos "c"
+use_parbox 1
+width "100line%"
 special "none"
 height "1in"
 height_special "totalheight"
 status open
 
 \begin_layout Itemize
-dsfd
+Easy to generate motion
 \end_layout
 
 \begin_layout Itemize
-fghfd
+Few actuators needed
 \end_layout
 
 \end_inset
@@ -592,19 +693,23 @@ fghfd
 
 \begin_layout Plain Layout
 \begin_inset Box Frameless
-position "t"
+position "c"
 hor_pos "c"
 has_inner_box 1
-inner_pos "t"
-use_parbox 0
-width "100col%"
+inner_pos "c"
+use_parbox 1
+width "100line%"
 special "none"
 height "1in"
 height_special "totalheight"
 status open
 
-\begin_layout Plain Layout
-sdf
+\begin_layout Itemize
+Few connection possibility
+\end_layout
+
+\begin_layout Itemize
+Hard to self-reconfigure
 \end_layout
 
 \end_inset
@@ -616,7 +721,7 @@ sdf
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -625,39 +730,33 @@ Lattice
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sdfd
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-sdfds
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-Hybrid
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Easy self-reconfiguration
+\end_layout
+
+\begin_layout Itemize
+\align block
+Possible to connect in different directions
 \end_layout
 
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -667,7 +766,29 @@ Hybrid
 \begin_inset Text
 
 \begin_layout Plain Layout
-dsfd
+\begin_inset Box Frameless
+position "c"
+hor_pos "c"
+has_inner_box 1
+inner_pos "c"
+use_parbox 1
+width "100line%"
+special "none"
+height "1in"
+height_special "totalheight"
+status open
+
+\begin_layout Itemize
+Difficult to generate motion
+\end_layout
+
+\begin_layout Itemize
+Need of many actuators
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -709,6 +830,10 @@ name "Tab:TopSummary"
 
 \end_layout
 
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Section
 Other Possibilities
 \end_layout
@@ -727,6 +852,11 @@ Six-legged robot
 
 \begin_layout Itemize
 Biped robot
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
