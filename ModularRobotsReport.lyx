@@ -870,23 +870,162 @@ name "cha:Locomation"
 
 \end_layout
 
+\begin_layout Standard
+The locomotion in this report focuses on limbless modular robots in chain
+ topology.
+ For this kind of configuration sinusoidal
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "Sinusoidal Generator"
+description "SG produce a sine wave"
+
+\end_inset
+
+ generators produce smooth movements.
+ 
+\end_layout
+
 \begin_layout Section
 Controlling Method
 \end_layout
 
 \begin_layout Standard
-Limbless configuration:
-\end_layout
+The sine wave is produced according to following formula: 
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $y_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}$
 \end_inset
 
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-\begin_inset Formula $(A_{i},t,\phi,O_{i})$
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{equation}
+\end_layout
+
+\begin_layout Plain Layout
+
+y_{i}=A_{i}
+\backslash
+cdot sin(
+\backslash
+frac{2
+\backslash
+pi}{T}t+
+\backslash
+phi_{i})+O_{i}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{equation}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Whereas following notation holds:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ - Rotation angle
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $A_{i}$
+\end_inset
+
+ - Amplitude
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $T$
+\end_inset
+
+ - Control period
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $t$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ - Time
+\begin_inset Newline newline
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset Formula $\phi_{i}$
+\end_inset
+
+ - Phase offset
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $O_{i}$
+\end_inset
+
+ - Initial offset
+\end_layout
+
+\begin_layout Standard
+The index 
+\emph on
+i
+\emph default
+ indicates the relation to a dedicated joint.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Picture
+\end_layout
+
 \end_inset
 
 
@@ -896,49 +1035,177 @@ Limbless configuration:
 Locomotion in 2D
 \end_layout
 
+\begin_layout Standard
+Besides the 1D movement like a caterpillar it is also possible to generate
+ a more comples one be dedicating several modules to either horizontal or
+ vertical yawing or pitching.
+ This produces the snake-like movement.
+\end_layout
+
+\begin_layout Standard
+The modular robot's modules will therefore be connected in the following
+ manner.
+ Each second module will be rotated ab 90 degrees along the robot's main
+ axis.
+ The resulting configuration can be seen in figure XXX.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Picture
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notation:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $V_{x},H_{x}$
+\end_inset
+
+ - Vertical and horizontal module groups
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\vartriangle\phi_{V}$
+\end_inset
+
+ - Phase difference between two adjacent vertical modules
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\vartriangle\phi_{H}$
+\end_inset
+
+ - Phase deifference between two adjacent horizontal modules
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\vartriangle\phi_{VH}$
+\end_inset
+
+ - Phase difference between two adjacent horizontal and vertical modules
+\end_layout
+
 \begin_layout Section
 Locomotion capabilities
+\end_layout
+
+\begin_layout Standard
+This section gives an overview on the capabilities an example limbless modular
+ robot in chain topology regarding its locomotion.
 \end_layout
 
 \begin_layout Subsection
 Linear Gait
 \end_layout
 
+\begin_layout Standard
+The linear gait is the most straight forward one.
+ It enables the robot to move forward and backward in a line.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO: Picture, caterpillar
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Turning Gait
+\end_layout
+
+\begin_layout Standard
+This gait gives the robot the ability to add turning left and right to its
+ inventar of locomation.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Picture, caterpillar
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
 Rolling Gait
 \end_layout
 
+\begin_layout Standard
+The robot is rolling about its main body axis.
+\end_layout
+
 \begin_layout Subsection
 Lateral Shift
+\end_layout
+
+\begin_layout Standard
+The robot is shifting left or right to move like a snake.
 \end_layout
 
 \begin_layout Subsection
 Rotating Gait
 \end_layout
 
+\begin_layout Standard
+The robot rotates around its vertical body centre axis.
+\end_layout
+
+\begin_layout Standard
+Figure XXX gives and overview about locomotion gaits mentioned above with
+ its parameters for the sinusoidal generators.
+\end_layout
+
 \begin_layout Subsection
-Demos
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Demos, Examples for locomotion and reconfiguration
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Topology
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-1D, 2D, 3D
+\begin_layout Subsection
+1D
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Snake robots
+\end_layout
 
+\begin_layout Subsection
+2D
+\end_layout
 
+\begin_layout Subsection
+3D
 \end_layout
 
 \begin_layout Section
