@@ -830,7 +830,7 @@ name "Tab:TopSummary"
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset Note Note
 status collapsed
 
@@ -1037,7 +1037,7 @@ Locomotion in 2D
 
 \begin_layout Standard
 Besides the 1D movement like a caterpillar it is also possible to generate
- a more comples one be dedicating several modules to either horizontal or
+ a more complex one be dedicating several modules to either horizontal or
  vertical yawing or pitching.
  This produces the snake-like movement.
 \end_layout
@@ -1175,7 +1175,7 @@ Figure XXX gives and overview about locomotion gaits mentioned above with
  its parameters for the sinusoidal generators.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
 \begin_inset Note Note
 status open
 
@@ -1190,6 +1190,16 @@ Demos, Examples for locomotion and reconfiguration
 
 \begin_layout Section
 Topology
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Noch keine Ahnung
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1266,16 +1276,61 @@ Locomation gates
 Modular Robot Applications
 \end_layout
 
-\begin_layout Section
-Search and rescue
+\begin_layout Standard
+Although modular robots are not widely known as helpers in today's life
+ there are already a plenty of applications were they would be a great help
+ to humans.
+ In the following section a three areas of interest will be shown.
 \end_layout
 
 \begin_layout Section
-Inspection of tubes and bridges
+Search and Rescue
+\end_layout
+
+\begin_layout Standard
+A main advantage of robots in general is their potential access in dangerous
+ areas where otherwise humans could not go or would possibly harmed.
+ Especially modular robots could handle lots of different sitations and
+ terrains in the chaotic formed enviroments, e.g.
+ after catastrophies.
+ Tight spaces could be passed to detect life signs or deliver medical support.
+ Exploration and detection of autonomous or even semi-autonomous modular
+ robots could also support human rescue misions.
 \end_layout
 
 \begin_layout Section
-Space exploration
+Inspection of Tubes and Bridges
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO Picture
+\end_layout
+
+\end_inset
+
+ Service robots are available today doing pipe inspection as can be seen
+ e.g.
+ at 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ka:2009zl"
+
+\end_inset
+
+.
+ Furthermore modular robots would add more flexability to react dynamically
+ up on the enviroment, e.g.
+ broken pipe or very acute-angled bent one.
+ They can be protected against harmful enviromental intrusion, i.e.
+ water or dirt.
+\end_layout
+
+\begin_layout Section
+Space Exploration
 \begin_inset CommandInset label
 LatexCommand label
 name "sec:Space-exploration"
@@ -1283,6 +1338,25 @@ name "sec:Space-exploration"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Probably the biggest advantages modular robots have over traditional robots
+ or to put it different, the greates use of modular robots for humans is
+ in space applications.
+ Starting with the lift of from ground weight being brought to space is
+ very expensive.
+ Saving here gives refund for latter maybe more expensive investments.
+ A modular robot consists of normally few specialiced and lot of the same
+ kind of modules.
+ The modular design makes the transport more efficient.
+ And even if not yet all modules have been arrived at the space station
+ it is already possible to drive a limited configuration of the robot.
+ It is self-sustainable and is cabable of self-repair.
+ Once lifted to space the modular robot can do lot of different tasks where
+ traditional dedicated robots were needed before.
+ Of course it shall be flexible to handle unknown tasks and long-term space
+ missions as well.
 \end_layout
 
 \begin_layout Chapter
