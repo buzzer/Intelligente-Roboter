@@ -599,13 +599,13 @@ status collapsed
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Box Frameless
+\begin_inset Box Shadowbox
 position "t"
 hor_pos "c"
 has_inner_box 1
 inner_pos "t"
-use_parbox 1
-width "100line%"
+use_parbox 0
+width "99text%"
 special "none"
 height "1in"
 height_special "totalheight"
@@ -615,7 +615,7 @@ status open
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="3">
 <features>
-<column alignment="center" valignment="middle" width="20text%">
+<column alignment="center" valignment="middle" width="10.8text%">
 <column alignment="center" valignment="middle" width="40text%">
 <column alignment="center" valignment="middle" width="40text%">
 <row>
@@ -667,11 +667,11 @@ hor_pos "c"
 has_inner_box 1
 inner_pos "c"
 use_parbox 1
-width "100line%"
+width "40text%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 Easy to generate motion
@@ -698,11 +698,11 @@ hor_pos "c"
 has_inner_box 1
 inner_pos "c"
 use_parbox 1
-width "100line%"
+width "40text%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 Few connection possibility
@@ -740,11 +740,11 @@ hor_pos "c"
 has_inner_box 1
 inner_pos "c"
 use_parbox 1
-width "100line%"
+width "40text%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 Easy self-reconfiguration
@@ -772,11 +772,11 @@ hor_pos "c"
 has_inner_box 1
 inner_pos "c"
 use_parbox 1
-width "100line%"
+width "40text%"
 special "none"
 height "1in"
 height_special "totalheight"
-status open
+status collapsed
 
 \begin_layout Itemize
 Difficult to generate motion
@@ -827,10 +827,7 @@ name "Tab:TopSummary"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Note Note
 status collapsed
 
