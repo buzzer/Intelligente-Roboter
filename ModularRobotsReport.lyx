@@ -35,7 +35,7 @@
 \pdf_colorlinks false
 \pdf_backref false
 \pdf_pdfusetitle true
-\papersize a4paper
+\papersize default
 \use_geometry false
 \use_amsmath 1
 \use_esint 1
@@ -246,6 +246,13 @@ Modular robots are designed to move in lot of different environment requiring
 
 \begin_layout Subsection*
 Self-repair Capability
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:MotivationSelfRepair"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1367,16 +1374,118 @@ name "cha:Challenges"
 
 \end_layout
 
+\begin_layout Standard
+For modular robots becoming mainstream in industry, households or military
+ it is necessary to overcome today's shortcomings.
+ In the following sections an overview about three main areas of improvments
+ shall be given.
+\end_layout
+
 \begin_layout Section
 Big Systems
+\end_layout
+
+\begin_layout Standard
+Today's typical modular robot systems consists of 6 to 10 modules.
+ More sophisticated systems inherit maybe up to 100 modules (in labor enviroment
+).
+ To use modular robots cababilities efficiently it is required to support
+ more than 1000 modules in one system.
+ Considering a biological living cell as self-organizing modular system
+ example that order of magnitude can even be seen as a minimum requirement.
+\begin_inset Newline newline
+\end_inset
+
+A Demonstrations of such a system requires re-thinking of key HW-issues,
+ i.e.:
+\end_layout
+
+\begin_layout Itemize
+binding mechanisms,
+\end_layout
+
+\begin_layout Itemize
+power distribution,
+\end_layout
+
+\begin_layout Itemize
+dynamics and vibrations.
+\end_layout
+
+\begin_layout Standard
+Not only HW is to be re-worked but als new SW-algorithms have to be invented
+ to account for:
+\end_layout
+
+\begin_layout Itemize
+noise,
+\end_layout
+
+\begin_layout Itemize
+errors and failures, as well as
+\end_layout
+
+\begin_layout Itemize
+changing connecting topologies.
 \end_layout
 
 \begin_layout Section
 Self-repairing Systems
 \end_layout
 
+\begin_layout Standard
+As mentioned at the beginning of this work, in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:MotivationSelfRepair"
+
+\end_inset
+
+, Self-repairing capabilities are an big motivation and still a challenge
+ for modular robots.
+\begin_inset Newline newline
+\end_inset
+
+An ideal (compromised) self-repairing system shall be able to:
+\end_layout
+
+\begin_layout Itemize
+recover from (serious) damage,
+\end_layout
+
+\begin_layout Itemize
+Sensing and estimating its global state,
+\end_layout
+
+\begin_layout Itemize
+Re-configurate from any initial state
+\end_layout
+
+\begin_layout Itemize
+Self-assemble of (randomly) blown-up system or revover under certain percentage
+ of faulty units
+\end_layout
+
+\begin_layout Standard
+To achieve this it requires here as well re-thinking of SW-algorithms and
+ of used HW.
+\end_layout
+
 \begin_layout Section
 Self-replication and self-extension
+\end_layout
+
+\begin_layout Standard
+Maybe the most far away in future target for modular robots is the cabability
+ to self-replicate and self-extend.
+\begin_inset Newline newline
+\end_inset
+
+Low-level modules or elementary components (maybe even raw material) could
+ be used to self-replicate.
+ Such a system could even improve itself from environmental resources.
+ To achieve this one has to overcam the complexity of machines builidng
+ copies of themselves.
 \end_layout
 
 \begin_layout Chapter
