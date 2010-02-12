@@ -4,7 +4,11 @@
 \begin_header
 \textclass scrreprt
 \begin_preamble
-
+\renewcommand\[{\begin{equation}}
+\renewcommand\]{\end{equation}} 
+%To number equations in the form (section.formula):
+%\numberwithin{equation}{part} %or
+%\numberwithin{equation}{section} 
 \end_preamble
 \use_default_options true
 \language english
@@ -137,6 +141,10 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
 
@@ -145,18 +153,13 @@ LatexCommand printnomenclature
 
 \end_layout
 
-\begin_layout Chapter
-Introduction
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
- 2 Seiten
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Introduction
 \end_layout
 
 \begin_layout Standard
@@ -273,7 +276,7 @@ Economic Advantage
 \end_layout
 
 \begin_layout Standard
-Besides functional advantages as the one listed above the exonomic one would
+Besides functional advantages as the one listed above the economic one would
  be to minimize overall costs compared to traditional robot to complete
  a mission.
  Let us consider only one or two, maybe a few type of modules mass produced
@@ -287,11 +290,9 @@ reference "sec:Space-exploration"
 \end_inset
 
 .
-\end_layout
-
-\begin_layout Section*
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TODO: Structure of this text
@@ -382,12 +383,12 @@ In the chain topology modules are connected in a string or tree-like manner.
 status open
 
 \begin_layout Plain Layout
-TODO: insert figure
+TODO: insert figure 
 \end_layout
 
 \end_inset
 
-Such modular robots hav a strict serial architecture when speaking about
+Such modular robots have a strict serial architecture when speaking about
  robot control.
  This topology is very versatile but computationally difficult to represent
  and analyze.
@@ -427,7 +428,7 @@ status open
 \begin_layout Standard
 In the lattice topology the robot's modules are connected in a space filling
  3D pattern by default.
- In contrast to the chain topology a robot is controlled and excecutes its
+ In contrast to the chain topology a robot is controlled and executes its
  motion in parallel.
  The overall computation is simpler and this topology is scalable to complex
  systems.
@@ -479,7 +480,7 @@ Superbot from Wei-min Shen
 
 One examples comes from the some famous pioneer of modular robots, Mark
  Yim.
- He developed a prototyp called 
+ He developed a prototype called 
 \begin_inset Quotes eld
 \end_inset
 
@@ -517,16 +518,56 @@ description "Degree of Freedom"
 
 \end_inset
 
-That modular robot features many modes of locomation, e.g.
+That modular robot features many modes of locomotion, e.g.
  caterpillar, wheel, spider.
  Whereas the first version came along without sensors new versions have
- force toryue, whisker and infrared proximity sensors.
+ force torque, whisker and infrared proximity sensors.
  
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Really w/o sensors? Picture
+Really w/o sensors?
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/Polypod.gif
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Mark Yim's PolyPod (graphic)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:PolyPod"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -540,17 +581,7 @@ A good example of a hybrid modular robot is the 'M-TRAN' from Satoshi Murata
  al., a Japanese research group.
  The robot has two blocks (active), a motor each, connected through a link
  (passive).
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO add Picture
-\end_layout
-
-\end_inset
-
-Resulting in two parallel axes and six connectable surfaces.
+ Resulting in two parallel axes and six connect-able surfaces.
  The active block has therefore mechanical connectors.
  Both blocks have a 90 degrees rotation angle.
  Each module has 4 CPUs in a Master/Slave-Architecture.
@@ -559,11 +590,62 @@ Resulting in two parallel axes and six connectable surfaces.
  data.
  Module inter-communication is realized via virtual shared memory.
  
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/MTRANMultimode.jpg
+	lyxscale 50
+	width 60text%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/MTRANFigure.jpg
+	lyxscale 50
+	width 40text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Satoshi Murata M-TRAN
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:M-TRAN"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-TODO: add picture
+limbless ??
 \end_layout
 
 \end_inset
@@ -572,13 +654,7 @@ TODO: add picture
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-limbless ??
-\end_layout
-
+\begin_inset Newpage pagebreak
 \end_inset
 
 
@@ -600,6 +676,7 @@ reference "Tab:TopSummary"
 .
  
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status collapsed
@@ -896,23 +973,11 @@ Controlling Method
 \begin_layout Standard
 The sine wave is produced according to following formula: 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula $y_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -946,8 +1011,62 @@ end{equation}
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Whereas following notation holds:
+\begin_inset Formula \begin{equation}
+y_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}\label{eq:SinusoidalControl}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Wrap figure
+lines 0
+placement o
+overhang 0col%
+width "50col%"
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/AngleModule.tiff
+	lyxscale 50
+	height 10theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Rotation Angle
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:RotationJointAngle"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Whereas following notation holds:
 \begin_inset Newline newline
 \end_inset
 
@@ -955,7 +1074,15 @@ Whereas following notation holds:
 \begin_inset Formula $y_{i}$
 \end_inset
 
- - Rotation angle
+ - Rotation angle (fig.
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:RotationJointAngle"
+
+\end_inset
+
+)
 \begin_inset Newline newline
 \end_inset
 
@@ -1022,17 +1149,6 @@ The index
 i
 \emph default
  indicates the relation to a dedicated joint.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Picture
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1051,18 +1167,15 @@ The modular robot's modules will therefore be connected in the following
  manner.
  Each second module will be rotated ab 90 degrees along the robot's main
  axis.
- The resulting configuration can be seen in figure XXX.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: Picture
-\end_layout
+ The resulting configuration can be seen in figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:SinusoidalControl"
 
 \end_inset
 
-
+.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -1090,7 +1203,7 @@ Notation:
 \begin_inset Formula $\vartriangle\phi_{H}$
 \end_inset
 
- - Phase deifference between two adjacent horizontal modules
+ - Phase difference between two adjacent horizontal modules
 \begin_inset Newline newline
 \end_inset
 
@@ -1099,6 +1212,47 @@ Notation:
 \end_inset
 
  - Phase difference between two adjacent horizontal and vertical modules
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ControllMethod.tiff
+	lyxscale 20
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Sinusoidal controlling method
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:SinusoidalControl"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1119,7 +1273,7 @@ The linear gait is the most straight forward one.
  It enables the robot to move forward and backward in a line.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 TODO: Picture, caterpillar
@@ -1136,10 +1290,10 @@ Turning Gait
 
 \begin_layout Standard
 This gait gives the robot the ability to add turning left and right to its
- inventar of locomation.
+ inventory of locomotion.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Picture, caterpillar
@@ -1172,16 +1326,64 @@ Rotating Gait
 
 \begin_layout Standard
 The robot rotates around its vertical body centre axis.
+\begin_inset Newline newline
+\end_inset
+
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:LocomotionGaits"
+
+\end_inset
+
+ gives and overview about locomotion gaits mentioned above with its parameters
+ for the sinusoidal generators.
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename _Graphic/LocGaitsSum.tiff
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
+
 \end_layout
 
-\begin_layout Standard
-Figure XXX gives and overview about locomotion gaits mentioned above with
- its parameters for the sinusoidal generators.
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Summary Locomotion Gaits
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:LocomotionGaits"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Demos, Examples for locomotion and reconfiguration
@@ -1194,16 +1396,6 @@ Demos, Examples for locomotion and reconfiguration
 
 \begin_layout Section
 Topology
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Noch keine Ahnung
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsection
@@ -1227,11 +1419,40 @@ Classic approach
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
 
 \begin_layout Plain Layout
-Inverse Kinematic
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConInverseKin.tiff
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Inverse Kinematics
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:InverseKinematics"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1244,11 +1465,76 @@ Bio-inspired Approach
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConSinusOsc.tiff
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConCPG.tiff
+	lyxscale 20
+	height 10theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Central Pattern Generator (CPG)
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:CPG"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Central Pattern Generator (CPG)
+Central Pattern Generator (CPG) 
 \end_layout
 
 \begin_layout Plain Layout
@@ -1256,7 +1542,7 @@ Show contrast to conventional mobile robots.
 \end_layout
 
 \begin_layout Plain Layout
-Locomation gaits available.
+Locomotion gaits available.
 \end_layout
 
 \begin_layout Plain Layout
@@ -1273,7 +1559,7 @@ Sinusoidal oscillators
 \end_layout
 
 \begin_layout Section
-Locomation gates
+Locomotion gates
 \end_layout
 
 \begin_layout Chapter
@@ -1294,12 +1580,53 @@ Search and Rescue
 \begin_layout Standard
 A main advantage of robots in general is their potential access in dangerous
  areas where otherwise humans could not go or would possibly harmed.
- Especially modular robots could handle lots of different sitations and
- terrains in the chaotic formed enviroments, e.g.
- after catastrophies.
+ Especially modular robots could handle lots of different situations and
+ terrains in the chaotic formed environments, e.g.
+ after catastrophes.
  Tight spaces could be passed to detect life signs or deliver medical support.
  Exploration and detection of autonomous or even semi-autonomous modular
- robots could also support human rescue misions.
+ robots could also support human rescue missions.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename _Graphic/SearchnRescue.jpg
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Search and Rescue
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:SearchNRescue"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1307,16 +1634,7 @@ Inspection of Tubes and Bridges
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO Picture
-\end_layout
-
-\end_inset
-
- Service robots are available today doing pipe inspection as can be seen
+Service robots are available today doing pipe inspection as can be seen
  e.g.
  at 
 \begin_inset CommandInset citation
@@ -1326,11 +1644,76 @@ key "Ka:2009zl"
 \end_inset
 
 .
- Furthermore modular robots would add more flexability to react dynamically
- up on the enviroment, e.g.
+ Furthermore modular robots would add more flexibility to react dynamically
+ up on the environment, e.g.
  broken pipe or very acute-angled bent one.
- They can be protected against harmful enviromental intrusion, i.e.
+ They can be protected against harmful environmental intrusion, i.e.
  water or dirt.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/Inspection.jpg
+	lyxscale 30
+	height 12theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/AppPipes1.tiff
+	lyxscale 20
+	height 11theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/AppPipes2.tiff
+	lyxscale 20
+	height 11theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tube Inspection
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:TubeInspection"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1346,21 +1729,78 @@ name "sec:Space-exploration"
 
 \begin_layout Standard
 Probably the biggest advantages modular robots have over traditional robots
- or to put it different, the greates use of modular robots for humans is
+ or to put it different, the greatest use of modular robots for humans is
  in space applications.
  Starting with the lift of from ground weight being brought to space is
  very expensive.
  Saving here gives refund for latter maybe more expensive investments.
- A modular robot consists of normally few specialiced and lot of the same
+ A modular robot consists of normally few specialized and lot of the same
  kind of modules.
  The modular design makes the transport more efficient.
  And even if not yet all modules have been arrived at the space station
  it is already possible to drive a limited configuration of the robot.
- It is self-sustainable and is cabable of self-repair.
+ It is self-sustainable and is capable of self-repair.
  Once lifted to space the modular robot can do lot of different tasks where
  traditional dedicated robots were needed before.
  Of course it shall be flexible to handle unknown tasks and long-term space
  missions as well.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename _Graphic/SpaceMolecubes.jpg
+	lyxscale 10
+	height 30theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename _Graphic/SpaceExploration.jpg
+	lyxscale 10
+	height 30theight%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Space Exploration
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:SpaceExploration"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
@@ -1377,7 +1817,7 @@ name "cha:Challenges"
 \begin_layout Standard
 For modular robots becoming mainstream in industry, households or military
  it is necessary to overcome today's shortcomings.
- In the following sections an overview about three main areas of improvments
+ In the following sections an overview about three main areas of improvements
  shall be given.
 \end_layout
 
@@ -1387,9 +1827,9 @@ Big Systems
 
 \begin_layout Standard
 Today's typical modular robot systems consists of 6 to 10 modules.
- More sophisticated systems inherit maybe up to 100 modules (in labor enviroment
-).
- To use modular robots cababilities efficiently it is required to support
+ More sophisticated systems inherit maybe up to 100 modules (in labor environmen
+t).
+ To use modular robots capabilities efficiently it is required to support
  more than 1000 modules in one system.
  Considering a biological living cell as self-organizing modular system
  example that order of magnitude can even be seen as a minimum requirement.
@@ -1413,7 +1853,7 @@ dynamics and vibrations.
 \end_layout
 
 \begin_layout Standard
-Not only HW is to be re-worked but als new SW-algorithms have to be invented
+Not only HW is to be re-worked but also new SW-algorithms have to be invented
  to account for:
 \end_layout
 
@@ -1458,11 +1898,11 @@ Sensing and estimating its global state,
 \end_layout
 
 \begin_layout Itemize
-Re-configurate from any initial state
+Re-configure from any initial state
 \end_layout
 
 \begin_layout Itemize
-Self-assemble of (randomly) blown-up system or revover under certain percentage
+Self-assemble of (randomly) blown-up system or recover under certain percentage
  of faulty units
 \end_layout
 
@@ -1476,7 +1916,7 @@ Self-replication and self-extension
 \end_layout
 
 \begin_layout Standard
-Maybe the most far away in future target for modular robots is the cabability
+Maybe the most far away in future target for modular robots is the capability
  to self-replicate and self-extend.
 \begin_inset Newline newline
 \end_inset
@@ -1484,7 +1924,7 @@ Maybe the most far away in future target for modular robots is the cabability
 Low-level modules or elementary components (maybe even raw material) could
  be used to self-replicate.
  Such a system could even improve itself from environmental resources.
- To achieve this one has to overcam the complexity of machines builidng
+ To achieve this one has to overcome the complexity of machines building
  copies of themselves.
 \end_layout
 
@@ -1513,10 +1953,16 @@ What is (and why) useful for future student projects?
 
 \end_inset
 
-
+ We have seen what is the motivation for modular robots.
+ An insight view on their morphology was given and the locomotion model
+ was described.
+ Finally tomorrow's application and challenges give a coarse target for
+ the young scientific field of modular robots.
+ It will get more exciting on this topic from year to year.
 \end_layout
 
 \begin_layout Standard
+\start_of_appendix
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintAll"
