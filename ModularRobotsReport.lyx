@@ -9,6 +9,9 @@
 %To number equations in the form (section.formula):
 %\numberwithin{equation}{part} %or
 %\numberwithin{equation}{section} 
+\KOMAoptions{%
+abstract=true  %Show abstract title
+}
 \end_preamble
 \use_default_options true
 \language english
@@ -64,7 +67,7 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 http://tams-www.informatik.uni-hamburg.de/lectures/richtlinien/proseminar.html
@@ -106,21 +109,15 @@ University of Hamburg, Department of Informatics, Group Technical Aspects
 \end_layout
 
 \begin_layout Abstract
-This report gives an basic introduction to the field of Modular Robots in
- the science of mobile robotics.
- It targets interested people how want to go deeper into modular robotics.
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Who wants to get an comprehensive work on the topic is advised to follow
- the bibliography at the end.
-\end_layout
-
-\end_inset
-
-
+\noindent
+This report gives a basic introduction to the scientific field of modular
+ robotics.
+ It targets interested people who want to know more on modular robotics.
+ Modular robots have versatile morphologies each with a dedicated locomotion
+ capability.
+ One controlling method will be discussed in detail.
+ Several applications and future challanges for modular robots will be given
+ at the end.
 \end_layout
 
 \begin_layout Abstract
@@ -204,12 +201,12 @@ Structures
 Modular robots consists of few types of building blocks with an uniform
  interface.
  That interface has to pass mechanical forces, electrical power as well
- as communication between building blocks.
+ as the communication between building blocks.
 \begin_inset Newline newline
 \end_inset
 
-Although the basic uniformity of blocks there are some primary structured
- ones.
+Although there is a basic uniformity of the blocks, some have a primary
+ structure.
  They provide the robot with necessary and extra features like a gripper,
  feet, wheels, sensors, e.g.
  a camera, as well as energy storage or additional payload.
@@ -225,7 +222,11 @@ Robustness
 
 \begin_layout Standard
 Modular robots are built from normally one type of robust building block,
- lets call it module.
+ in the following sections called 
+\emph on
+module
+\emph default
+.
  This module has to be robust enough for connecting some key part of the
  robot, e.g.
  the neck.
@@ -295,7 +296,7 @@ reference "sec:Space-exploration"
 status collapsed
 
 \begin_layout Plain Layout
-TODO: Structure of this text
+Structure of this text?
 \end_layout
 
 \end_inset
@@ -315,12 +316,9 @@ description "One dimensional topological robots."
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
+ 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Difference Morphology vs.
@@ -351,18 +349,13 @@ Topology
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-In general there are three classes of topologies.
+ Each morphology has its own locomotion capabilities.
+ The number of configurations grows exponentially with the number of modules.
+ In general there are three classes of topologies.
 \end_layout
 
 \begin_layout Section
-Chain Topology
-\end_layout
-
-\begin_layout Standard
+Chain Topology 
 \begin_inset Note Note
 status open
 
@@ -377,21 +370,12 @@ status open
 
 \begin_layout Standard
 In the chain topology modules are connected in a string or tree-like manner.
- In can fold up to become a 3D structure.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TODO: insert figure 
-\end_layout
-
-\end_inset
-
-Such modular robots have a strict serial architecture when speaking about
+ It can fold up to become a 3D structure.
+ Such modular robots have a strict serial architecture when speaking about
  robot control.
  This topology is very versatile but computationally difficult to represent
  and analyze.
+ 
 \begin_inset Note Note
 status open
 
@@ -401,28 +385,18 @@ TODO: explain or reference.
 
 \end_inset
 
+ Sometimes it is also referenced as 1D or 2D topology (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:Topologies"
 
-\end_layout
+\end_inset
 
-\begin_layout Subsection
-Example
+).
 \end_layout
 
 \begin_layout Section
 Lattice Topology
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-2D locomotion
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -442,11 +416,60 @@ TODO: explain or reference.
 
 \end_inset
 
+ Sometimes it is also referenced as 3D topology.
+ See figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:Topologies"
+
+\end_inset
+
+ to get an overview.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename _Graphic/Topologies.tiff
+	lyxscale 30
+	width 80text%
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Subsection
-Example
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Modular Robot Topologies
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:Topologies"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -458,15 +481,12 @@ This is not an standalone topology but more a dynamic hybrid from the two
  previous types.
  It can change from chain to lattice topology or vice versa adapting to
  its environment and task.
-\end_layout
-
-\begin_layout Subsection
-Example
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 PolyBot from Mark Yim
@@ -478,13 +498,13 @@ Superbot from Wei-min Shen
 
 \end_inset
 
-One examples comes from the some famous pioneer of modular robots, Mark
+ One examples comes from the some famous pioneer of modular robots, Mark
  Yim.
  He developed a prototype called 
 \begin_inset Quotes eld
 \end_inset
 
-PolyBot
+Polypod
 \begin_inset Quotes erd
 \end_inset
 
@@ -497,17 +517,7 @@ description "Massachusetts Institute of Technology"
 \end_inset
 
  in 1994.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-double check name
-\end_layout
-
-\end_inset
-
-It is a chain self-reconfigurable system.
+ It is a chain self-reconfigurable system.
  Each module is roughly cubic shaped, with about 5 centimeters of edge length
  and has one rotational DOF.
  
@@ -522,16 +532,6 @@ That modular robot features many modes of locomotion, e.g.
  caterpillar, wheel, spider.
  Whereas the first version came along without sensors new versions have
  force torque, whisker and infrared proximity sensors.
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Really w/o sensors?
-\end_layout
-
-\end_inset
-
  
 \begin_inset Float figure
 placement H
@@ -641,16 +641,6 @@ name "Fig:M-TRAN"
 \end_inset
 
  
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-limbless ??
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -962,8 +952,201 @@ description "SG produce a sine wave"
 
 \end_inset
 
- generators produce smooth movements.
+ oscillators produce smooth movements and require only few resources.
+ Compared to this simplified model Central Pattern Generators (CPGs) can
+ be used to be more flexible regarding environmental interaction but not
+ discussed in here.
+\end_layout
+
+\begin_layout Section
+Classic approach
+\end_layout
+
+\begin_layout Standard
+The classic approach to the joint coordination problem (figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Fig:InverseKinematics"
+
+\end_inset
+
+) calculates the joint's angles to realize a gait 
+\begin_inset Formula $\varphi_{i}(t)$
+\end_inset
+
+.
+ This mathematical modeling is realized via inverse kinematics.
+ The disadvantages of this approach is retrieving equations that are only
+ valid for an specifig morphology.
  
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConInverseKin.tiff
+	lyxscale 50
+	width 50text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Inverse Kinematics
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:InverseKinematics"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bio-inspired Approach
+\end_layout
+
+\begin_layout Standard
+Discovering the locomotion of animals, e.g.
+ the lamprey, so called CPGs control the rhythmic activities of the animal
+ and thus of the modular robot.
+ As there exists typically more than one CPG in a system is is quite difficult
+ to coordinate them in an efficient manner, e.g.
+ to interact with environmental objects (like modular grasping).
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Central Pattern Generator (CPG) 
+\end_layout
+
+\begin_layout Plain Layout
+Show contrast to conventional mobile robots.
+\end_layout
+
+\begin_layout Plain Layout
+Locomotion gaits available.
+\end_layout
+
+\begin_layout Plain Layout
+Modular Grasping
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sinusoidal oscillators
+\end_layout
+
+\begin_layout Standard
+This kind of locomotion method for modular robots is based on typically
+ one sinusoidal oscillator per system and thus requires few resource at
+ the costs of some flexibility.
+ 
+\end_layout
+
+\begin_layout Standard
+In the following sections the sinusoidal oscillator method will be discussed.
+ 
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConSinusOsc.tiff
+	lyxscale 20
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConCPG.tiff
+	lyxscale 20
+	height 10theight%
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Central Pattern Generator (CPG) and sinusoidal oscillators 
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Fig:CPG"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Locomotion gates?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1018,7 +1201,7 @@ end{equation}
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-y_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}\label{eq:SinusoidalControl}\end{equation}
+\varphi_{i}=A_{i}\cdot sin(\frac{2\pi}{T}t+\phi_{i})+O_{i}\label{eq:SinusoidalControl}\end{equation}
 
 \end_inset
 
@@ -1071,7 +1254,7 @@ name "Fig:RotationJointAngle"
 \end_inset
 
 
-\begin_inset Formula $y_{i}$
+\begin_inset Formula $\varphi_{i}$
 \end_inset
 
  - Rotation angle (fig.
@@ -1152,14 +1335,14 @@ i
 \end_layout
 
 \begin_layout Subsection
-Locomotion in 2D
+Locomotion in 1D and 2D
 \end_layout
 
 \begin_layout Standard
 Besides the 1D movement like a caterpillar it is also possible to generate
  a more complex one be dedicating several modules to either horizontal or
  vertical yawing or pitching.
- This produces the snake-like movement.
+ This produces the 2D snake-like movement.
 \end_layout
 
 \begin_layout Standard
@@ -1340,6 +1523,7 @@ reference "Fig:LocomotionGaits"
  for the sinusoidal generators.
  
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status collapsed
@@ -1391,8 +1575,9 @@ Demos, Examples for locomotion and reconfiguration
 
 \end_inset
 
-
-\end_layout
+ 
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Section
 Topology
@@ -1402,7 +1587,7 @@ Topology
 1D
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Snake robots
 \end_layout
 
@@ -1414,152 +1599,9 @@ Snake robots
 3D
 \end_layout
 
-\begin_layout Section
-Classic approach
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConInverseKin.tiff
-	lyxscale 50
-	width 50text%
-
 \end_inset
 
 
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Inverse Kinematics
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "Fig:InverseKinematics"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Bio-inspired Approach
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConSinusOsc.tiff
-	lyxscale 20
-	width 100text%
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename /Users/sebastian/Documents/_Master/Hamburg/_WS09/_IntelligenteRoboter/_Vortrag/_Graphic/ConCPG.tiff
-	lyxscale 20
-	height 10theight%
-
-\end_inset
-
-
-\begin_inset space \hfill{}
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-Central Pattern Generator (CPG)
-\end_layout
-
-\end_inset
-
-
-\begin_inset CommandInset label
-LatexCommand label
-name "Fig:CPG"
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Central Pattern Generator (CPG) 
-\end_layout
-
-\begin_layout Plain Layout
-Show contrast to conventional mobile robots.
-\end_layout
-
-\begin_layout Plain Layout
-Locomotion gaits available.
-\end_layout
-
-\begin_layout Plain Layout
-Modular Grasping
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-Sinusoidal oscillators
-\end_layout
-
-\begin_layout Section
-Locomotion gates
 \end_layout
 
 \begin_layout Chapter
@@ -1958,7 +2000,9 @@ What is (and why) useful for future student projects?
  was described.
  Finally tomorrow's application and challenges give a coarse target for
  the young scientific field of modular robots.
- It will get more exciting on this topic from year to year.
+ The scientific area on modular robots is exciting and has some impressive
+ advantages compared to traditional field of robotics regarding versatility
+ and fast prototyping when testing new ideas.
 \end_layout
 
 \begin_layout Standard
