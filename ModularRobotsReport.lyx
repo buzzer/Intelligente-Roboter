@@ -83,7 +83,7 @@ sebastianrockel@gmail.com
 \end_layout
 
 \begin_layout Subject
-Intelligente Roboter WS 2009
+Seminar Intelligente Roboter WS 2009
 \end_layout
 
 \begin_layout Title
@@ -99,6 +99,8 @@ Sebastian Rockel
 \begin_inset Newline newline
 \end_inset
 
+
+\size normal
 Supervised by Ph.D.
  Houxiang Zhang
 \end_layout
@@ -116,7 +118,7 @@ This report gives a basic introduction to the scientific field of modular
  Modular robots have versatile morphologies each with a dedicated locomotion
  capability.
  One controlling method will be discussed in detail.
- Several applications and future challanges for modular robots will be given
+ Several applications and future challenges for modular robots will be given
  at the end.
 \end_layout
 
@@ -208,8 +210,8 @@ Modular robots consists of few types of building blocks with an uniform
 Although there is a basic uniformity of the blocks, some have a primary
  structure.
  They provide the robot with necessary and extra features like a gripper,
- feet, wheels, sensors, e.g.
- a camera, as well as energy storage or additional payload.
+ feet, wheels, sensors (e.g.
+ a camera) as well as energy storage or additional payload.
 \end_layout
 
 \begin_layout Section
@@ -230,11 +232,11 @@ module
  This module has to be robust enough for connecting some key part of the
  robot, e.g.
  the neck.
- Furthermore also robot parts that don't require robustness but accuracy,
+ Furthermore also robot parts that do not require robustness but accuracy,
  e.g.
- arms or even, fingers have to be built from the one or few kinds of modules.
- Thus the certainly robustness of one module type defines the robust structure
- of the whole robot.
+ arms or even fingers have to be built from the one or few kinds of modules.
+ Thus the dedicated robustness of one module type defines the robustness
+ of the whole robot structure.
 \end_layout
 
 \begin_layout Subsection*
@@ -242,10 +244,10 @@ Adaptivity
 \end_layout
 
 \begin_layout Standard
-Modular robots are designed to move in lot of different environment requiring
- to morphological change the robot's shape to perform the most efficient
- movement according to it.
- Full filling more difficult tasks than ordinary robots is possible.
+Modular robots are designed to move and act in many different environments
+ requiring morphological changes of the robot to perform an efficient movement.
+ Full filling more difficult tasks than ordinary robots are capable of shall
+ be possible.
 \end_layout
 
 \begin_layout Subsection*
@@ -260,16 +262,16 @@ name "sub:MotivationSelfRepair"
 \end_layout
 
 \begin_layout Standard
-Another advantage of modular robots is to fix cause damage at the robot
+Another advantage of modular robots is to fix damage caused at the robot
  structure.
 \begin_inset Newline newline
 \end_inset
 
 So a modular robot could repair, i.e.
  exchange, defect modules with good backup ones.
- Following this idea it is also imaginable that such kind of robot could
- repair another robot of that kind if it run out of backup modules or is
- not in condition to repair itself.
+ Following this idea it is also imaginable that such kind of a robot could
+ repair another (similar) robot if it runs out of backup modules or is not
+ in good condition to repair itself.
 \end_layout
 
 \begin_layout Subsection*
@@ -277,12 +279,12 @@ Economic Advantage
 \end_layout
 
 \begin_layout Standard
-Besides functional advantages as the one listed above the economic one would
- be to minimize overall costs compared to traditional robot to complete
- a mission.
- Let us consider only one or two, maybe a few type of modules mass produced
- compared to a several order of magnitude higher count of dedicated modules
- for a traditional robot.
+Besides functional advantages, as the one listed above, the economic one
+ would be to minimize the overall costs compared to traditional robots,
+ to complete a mission.
+ Consider only one or two, maybe a few types of modules mass produced compared
+ to a several order of magnitude higher count of dedicated modules for a
+ traditional robot.
  Another economic advantage will be discussed in section 
 \begin_inset CommandInset ref
 LatexCommand ref
@@ -498,8 +500,7 @@ Superbot from Wei-min Shen
 
 \end_inset
 
- One examples comes from the some famous pioneer of modular robots, Mark
- Yim.
+ One examples comes from the famous pioneer of modular robots, Mark Yim.
  He developed a prototype called 
 \begin_inset Quotes eld
 \end_inset
@@ -555,7 +556,17 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Mark Yim's PolyPod (graphic)
+Mark Yim's Polypod (graphic)
+\begin_inset OptArg
+status open
+
+\begin_layout Plain Layout
+Mark Yim's Polypod
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -576,8 +587,11 @@ name "Fig:PolyPod"
 \end_layout
 
 \begin_layout Standard
-A good example of a hybrid modular robot is the 'M-TRAN' from Satoshi Murata
- et.
+A good example of a hybrid modular robot is the 
+\emph on
+M-TRAN
+\emph default
+ from Satoshi Murata et.
  al., a Japanese research group.
  The robot has two blocks (active), a motor each, connected through a link
  (passive).
@@ -623,7 +637,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Satoshi Murata M-TRAN
+Satoshi Murata's M-TRAN
 \end_layout
 
 \end_inset
@@ -954,16 +968,22 @@ description "SG produce a sine wave"
 
  oscillators produce smooth movements and require only few resources.
  Compared to this simplified model Central Pattern Generators (CPGs) can
- be used to be more flexible regarding environmental interaction but not
- discussed in here.
-\end_layout
-
-\begin_layout Section
-Classic approach
+ be used to be more flexible regarding environmental interactions but are
+ not discussed here.
 \end_layout
 
 \begin_layout Standard
-The classic approach to the joint coordination problem (figure 
+In the following sections an overview on some of the today's most popular
+ methods for robot locomotion is given before the one this report is focused
+ on will be discussed in detail.
+\end_layout
+
+\begin_layout Section
+Classical Approach
+\end_layout
+
+\begin_layout Standard
+The classical approach to the joint coordination problem (figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "Fig:InverseKinematics"
@@ -977,7 +997,7 @@ reference "Fig:InverseKinematics"
 .
  This mathematical modeling is realized via inverse kinematics.
  The disadvantages of this approach is retrieving equations that are only
- valid for an specifig morphology.
+ valid for a specific morphology and the problem of joint singularities.
  
 \begin_inset Float figure
 placement H
@@ -1058,7 +1078,7 @@ Modular Grasping
 \end_layout
 
 \begin_layout Section
-Sinusoidal oscillators
+Sinusoidal Oscillators
 \end_layout
 
 \begin_layout Standard
@@ -1119,7 +1139,18 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Central Pattern Generator (CPG) and sinusoidal oscillators 
+Central Pattern Generator (CPG) and sinusoidal oscillators
+\begin_inset OptArg
+status open
+
+\begin_layout Plain Layout
+CPG vs.
+ Oscillator
+\end_layout
+
+\end_inset
+
+ 
 \end_layout
 
 \end_inset
@@ -1154,7 +1185,8 @@ Controlling Method
 \end_layout
 
 \begin_layout Standard
-The sine wave is produced according to following formula: 
+The sine wave of a sinusoidal oscillator is produced according to following
+ equation: 
 \begin_inset Note Note
 status collapsed
 
@@ -1327,6 +1359,7 @@ reference "Fig:RotationJointAngle"
 \end_layout
 
 \begin_layout Standard
+\noindent
 The index 
 \emph on
 i
@@ -1348,7 +1381,7 @@ Besides the 1D movement like a caterpillar it is also possible to generate
 \begin_layout Standard
 The modular robot's modules will therefore be connected in the following
  manner.
- Each second module will be rotated ab 90 degrees along the robot's main
+ Every other module will be rotated ab 90 degrees along the robot's main
  axis.
  The resulting configuration can be seen in figure 
 \begin_inset CommandInset ref
@@ -1362,7 +1395,7 @@ reference "Fig:SinusoidalControl"
 \end_layout
 
 \begin_layout Standard
-Notation:
+Notation as follows:
 \begin_inset Newline newline
 \end_inset
 
@@ -1418,7 +1451,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Sinusoidal controlling method
+Sinusoidal Controlling Method
 \end_layout
 
 \end_inset
@@ -1439,12 +1472,12 @@ name "Fig:SinusoidalControl"
 \end_layout
 
 \begin_layout Section
-Locomotion capabilities
+Locomotion Capabilities
 \end_layout
 
 \begin_layout Standard
-This section gives an overview on the capabilities an example limbless modular
- robot in chain topology regarding its locomotion.
+This section gives an overview about the five locomotion capabilities of
+ an example limbless modular robot in chain topology.
 \end_layout
 
 \begin_layout Subsection
@@ -1519,8 +1552,8 @@ reference "Fig:LocomotionGaits"
 
 \end_inset
 
- gives and overview about locomotion gaits mentioned above with its parameters
- for the sinusoidal generators.
+ gives and overview about locomotion gaits mentioned above with its most
+ efficient parameters for the sinusoidal generator.
  
 \begin_inset Float figure
 placement H
@@ -1612,7 +1645,7 @@ Modular Robot Applications
 Although modular robots are not widely known as helpers in today's life
  there are already a plenty of applications were they would be a great help
  to humans.
- In the following section a three areas of interest will be shown.
+ In the following section three areas of interest will be shown.
 \end_layout
 
 \begin_layout Section
@@ -1620,13 +1653,14 @@ Search and Rescue
 \end_layout
 
 \begin_layout Standard
-A main advantage of robots in general is their potential access in dangerous
- areas where otherwise humans could not go or would possibly harmed.
+A main advantage of robots in general is their potential access to dangerous
+ areas where otherwise humans could not go respectively would possibly be
+ harmed.
  Especially modular robots could handle lots of different situations and
  terrains in the chaotic formed environments, e.g.
  after catastrophes.
  Tight spaces could be passed to detect life signs or deliver medical support.
- Exploration and detection of autonomous or even semi-autonomous modular
+ Exploration and detection of autonomous or at least semi-autonomous modular
  robots could also support human rescue missions.
  
 \begin_inset Float figure
@@ -1676,9 +1710,8 @@ Inspection of Tubes and Bridges
 \end_layout
 
 \begin_layout Standard
-Service robots are available today doing pipe inspection as can be seen
- e.g.
- at 
+Service robots are available today doing pipe inspection can be seen at
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Ka:2009zl"
@@ -1687,8 +1720,8 @@ key "Ka:2009zl"
 
 .
  Furthermore modular robots would add more flexibility to react dynamically
- up on the environment, e.g.
- broken pipe or very acute-angled bent one.
+ to the environment, e.g.
+ broken or very acute-angled bent pipe.
  They can be protected against harmful environmental intrusion, i.e.
  water or dirt.
  
@@ -1770,17 +1803,16 @@ name "sec:Space-exploration"
 \end_layout
 
 \begin_layout Standard
-Probably the biggest advantages modular robots have over traditional robots
- or to put it different, the greatest use of modular robots for humans is
- in space applications.
- Starting with the lift of from ground weight being brought to space is
+Probably the biggest advantage modular robots have over traditional robots
+ is the great use of them for humans in space applications.
+ Starting with the lift-off from ground, weight being brought to space is
  very expensive.
  Saving here gives refund for latter maybe more expensive investments.
  A modular robot consists of normally few specialized and lot of the same
  kind of modules.
  The modular design makes the transport more efficient.
- And even if not yet all modules have been arrived at the space station
- it is already possible to drive a limited configuration of the robot.
+ And even if not yet all modules have been arrived at building site it is
+ already possible to drive a limited configuration of the robot.
  It is self-sustainable and is capable of self-repair.
  Once lifted to space the modular robot can do lot of different tasks where
  traditional dedicated robots were needed before.
@@ -1859,8 +1891,8 @@ name "cha:Challenges"
 \begin_layout Standard
 For modular robots becoming mainstream in industry, households or military
  it is necessary to overcome today's shortcomings.
- In the following sections an overview about three main areas of improvements
- shall be given.
+ In the following sections an overview about three main areas of future
+ improvements shall be given.
 \end_layout
 
 \begin_layout Section
@@ -1868,13 +1900,14 @@ Big Systems
 \end_layout
 
 \begin_layout Standard
-Today's typical modular robot systems consists of 6 to 10 modules.
- More sophisticated systems inherit maybe up to 100 modules (in labor environmen
-t).
- To use modular robots capabilities efficiently it is required to support
+Today's typical modular robot systems consist of 6 to 10 modules.
+ More sophisticated systems inherit maybe up to 100 modules (under lab condition
+s ).
+ To use modular robot's capabilities efficiently it is required to support
  more than 1000 modules in one system.
  Considering a biological living cell as self-organizing modular system
- example that order of magnitude can even be seen as a minimum requirement.
+ example that consists of orders of magnitude more components, this can
+ even be seen as a minimum requirement.
 \begin_inset Newline newline
 \end_inset
 
@@ -1923,12 +1956,12 @@ reference "sub:MotivationSelfRepair"
 
 \end_inset
 
-, Self-repairing capabilities are an big motivation and still a challenge
+, self-repairing capabilities are a big motivation and still a challenge
  for modular robots.
 \begin_inset Newline newline
 \end_inset
 
-An ideal (compromised) self-repairing system shall be able to:
+An ideal self-repairing system shall be able to:
 \end_layout
 
 \begin_layout Itemize
@@ -1936,25 +1969,24 @@ recover from (serious) damage,
 \end_layout
 
 \begin_layout Itemize
-Sensing and estimating its global state,
+sensing and estimating its global state,
 \end_layout
 
 \begin_layout Itemize
-Re-configure from any initial state
+re-configure from any initial state and
 \end_layout
 
 \begin_layout Itemize
-Self-assemble of (randomly) blown-up system or recover under certain percentage
- of faulty units
+self-assemble of (randomly) blown-up system or recover from certain percentage
+ of faulty units.
 \end_layout
 
 \begin_layout Standard
-To achieve this it requires here as well re-thinking of SW-algorithms and
- of used HW.
+To achieve this a big re-thinking of SW-algorithms and HW is required.
 \end_layout
 
 \begin_layout Section
-Self-replication and self-extension
+Self-replication and Self-extension
 \end_layout
 
 \begin_layout Standard
@@ -1995,14 +2027,15 @@ What is (and why) useful for future student projects?
 
 \end_inset
 
- We have seen what is the motivation for modular robots.
+ It was shown the motivation for modular robots.
  An insight view on their morphology was given and the locomotion model
  was described.
- Finally tomorrow's application and challenges give a coarse target for
- the young scientific field of modular robots.
- The scientific area on modular robots is exciting and has some impressive
- advantages compared to traditional field of robotics regarding versatility
- and fast prototyping when testing new ideas.
+ Finally tomorrow's application and challenges have been given a coarse
+ target for the young scientific field of modular robotics.
+ This young area is thus exciting and has the great potential to produce
+ robots with impressive advantages compared to the traditional field of
+ robotics regarding versatility and fast prototyping when testing new ideas
+ in the mid to long-term.
 \end_layout
 
 \begin_layout Standard
